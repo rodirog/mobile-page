@@ -52,8 +52,6 @@ header h1{
 
   height: 4.9rem;
   width: 100%;
-
-  z-index: 1;
 }
 
 header img,
@@ -67,6 +65,7 @@ header h1:hover{
 
 main{
   max-width: 32rem;
+  
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -97,6 +96,7 @@ main p{
   border-radius: 2rem;
   
   object-fit: cover;
+  
   max-width: 100%;
 
   animation: downtop 1s 200ms backwards;
@@ -106,6 +106,7 @@ main p{
 
 .card img:hover{
   transform:scale(1.1);
+  
   cursor: pointer;
 }
 
