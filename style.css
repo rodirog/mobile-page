@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+:root{
+  font-size: 62.5%;
+
+  --ff-heading: 'Staatliches', cursive;
+  --ff-texting: 'Palanquin', sans-serif;
+  --ff-heading-sm: 'Staatliches', cursive;
+  --fs-heading: 4rem;
+  --fs-texting: 1.2rem;
+  --fs-heading-sm: 2rem;
+}
+
+body{
+  background-color: #EFF1FF;
+}
+
+header{
+  background-color: #8E9AAF;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2.6rem;
+  align-items: center;
+  
+  padding: 3.2rem 0 2.9rem;
+}
+
+header img{
+  max-height: 14.6rem;
+}
+
+header h1{
+  font-family: var(--ff-heading);
+  font-size: var(--fs-heading);
+  color: #FFFFFF;
+  font-weight: 400;
+  line-height: 3.4rem;
+  letter-spacing: 0.05em;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+
+  background-color: #CBC0D3;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 4.9rem;
+  width: 100%;
+
+  z-index: 1;
+}
+
+header img,
+header h1:hover{
+  cursor: pointer;
+}
+
+.main-wrapper{
+  padding: 2.3rem 5rem 6rem;
+}
+
+main{
+  max-width: 32rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 0 auto;
+}
+
+main p{
+  font-family: var(--ff-texting);
+  font-size: var(--fs-texting);
+  color: #23053A;
+  font-weight: 400;
+  line-height: 1.5rem;
+  text-align: center;
+
+  margin-bottom: 5.2rem;
+  
+  max-width: 27rem;
+}
+
+.cards{
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+.card img{
+  border-radius: 2rem;
+  
+  object-fit: cover;
+  max-width: 100%;
+
+  animation: downtop 1s 200ms backwards;
+
+  transition: all 200ms ease;
+}
+
+.card img:hover{
+  transform:scale(1.1);
+  cursor: pointer;
+}
+
+.card{
+  position: relative;
+}
+
+.card h2{
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+
+  font-family: var(--ff-heading-sm);
+  font-weight: 400;
+  font-size: var(--fs-heading-sm);
+  line-height: 3.4rem;
+  color: #4A4E69;
+  letter-spacing: 0.05em;
+
+  background-color: #FEEAFA;
+  border-radius: 2rem;
+  
+  padding: 2px 2.2rem 0 2.5rem;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  animation: topdown 700ms 600ms backwards;
+}
+
+@keyframes downtop{
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1
+  }
+}
+
+@keyframes topdown{
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
